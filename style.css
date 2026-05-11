@@ -1,0 +1,137 @@
+/* Mis variables de colores para usar en todo el sitio */
+:root {
+    --color-fondo: #010408;
+    --cian-brillante: #00f2ff;
+    --verde-neon: #39ff14;
+    --azul-fuerte: #0066ff;
+    --texto-gris-claro: #d1f7ff;
+    --fuente-elegante: 'Cormorant Garamond', serif;
+    --fuente-codigo: 'JetBrains Mono', monospace;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--texto-gris-claro);
+    font-family: var(--fuente-codigo);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Efecto de luz al fondo para que no se vea tan plano */
+.luces-de-atras {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 10% 10%, rgba(0, 242, 255, 0.05), transparent 50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Mi menú de arriba */
+.mi-barra-de-arriba {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 10%;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.mi-nombre-clave { color: var(--cian-brillante); font-weight: bold; }
+.mis-links a {
+    color: var(--texto-gris-claro);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.mis-links a:hover { color: var(--verde-neon); opacity: 1; }
+
+/* El bloque de la portada */
+.bloque-de-inicio { padding: 60px 10%; text-align: left; }
+.etiqueta-de-security {
+    color: var(--verde-neon);
+    font-size: 0.6rem;
+    border: 1px solid var(--verde-neon);
+    padding: 5px 12px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-family: var(--fuente-elegante);
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    margin: 0;
+    color: var(--cian-brillante);
+}
+
+.mi-titulo-profesional {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    color: var(--azul-fuerte);
+    margin-top: 0.5rem;
+}
+
+.mi-foto-contenedor {
+    margin-top: 2rem;
+    max-width: 400px;
+    filter: grayscale(100%);
+    border-left: 3px solid var(--cian-brillante);
+    transition: 0.8s ease;
+}
+.mi-foto-contenedor:hover { filter: grayscale(0%); }
+.mi-foto { width: 100%; display: block; }
+
+/* Estilo para todas las secciones */
+.seccion-normal {
+    padding: 60px 10%;
+    border-top: 1px solid rgba(0, 102, 255, 0.15);
+}
+
+.numero-seccion { font-size: 0.7rem; color: var(--verde-neon); margin-bottom: 2rem; }
+.frase-resaltada { font-family: var(--fuente-elegante); font-size: 2.2rem; margin-bottom: 1.5rem; }
+
+/* La cuadrícula de mis proyectos */
+.rejilla-de-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.cuadro-de-proyecto {
+    background: rgba(0, 102, 255, 0.05);
+    padding: 2rem;
+    border: 1px solid rgba(0, 242, 255, 0.1);
+    transition: 0.4s;
+}
+.cuadro-de-proyecto:hover { border-color: var(--cian-brillante); transform: translateY(-5px); }
+
+.parte-arriba-proyecto h3 { font-family: var(--fuente-elegante); font-size: 1.6rem; color: var(--cian-brillante); margin: 0; }
+.tipo-de-proyecto { font-size: 0.6rem; color: var(--verde-neon); display: block; margin-top: 5px; }
+.mis-herramientas { display: block; margin: 1rem 0; font-size: 0.7rem; color: var(--verde-neon); opacity: 0.8; }
+.boton-al-codigo { color: var(--cian-brillante); text-decoration: none; border-bottom: 1px solid var(--cian-brillante); font-size: 0.8rem; }
+
+/* Línea de tiempo del historial */
+.paso { display: flex; margin-bottom: 2.5rem; }
+.el-año { width: 120px; color: var(--verde-neon); font-weight: bold; }
+.lo-que-hice h4 { font-family: var(--fuente-elegante); font-size: 1.4rem; color: var(--cian-brillante); margin: 0; }
+
+/* Cuadros de formación */
+.rejilla-doble { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.cuadro-info { padding: 1.5rem; background: rgba(255,255,255,0.02); }
+.puntos-lista { padding-left: 1rem; }
+
+/* El pie de página */
+.el-final-de-pagina {
+    padding: 40px 10%;
+    border-top: 1px solid var(--azul-fuerte);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+}
+.mis-redes a { color: var(--cian-brillante); text-decoration: none; }
+
+/* Para que se vea bien en celulares */
+@media (max-width: 768px) {
+    .rejilla-doble { grid-template-columns: 1fr; }
+    .el-final-de-pagina { flex-direction: column; gap: 1rem; text-align: center; }
+}
