@@ -1,135 +1,467 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jesica Maldonado | Portafolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=JetBrains+Mono:wght@200;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-es="Jesica Maldonado — Desarrolladora Web Full Stack Jr." data-en="Jesica Maldonado — Jr. Full Stack Web Developer">Jesica Maldonado — Desarrolladora Web Full Stack Jr.</title>
+<meta name="description" content="Portafolio de Jesica Maldonado, desarrolladora web full stack jr. con formación en UX, IA y seguridad digital.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="luces-de-atras"></div>
+
+<a class="saltar-contenido" href="#contenido" data-es="Ir al contenido" data-en="Skip to content">Ir al contenido</a>
+
+<nav class="barra-navegacion">
+  <span class="marca">Jesica Maldonado</span>
+  <div class="enlaces-nav">
+    <a href="#sobre-mi" data-es="Quién soy" data-en="About me">Quién soy</a>
+    <a href="#habilidades" data-es="Stack" data-en="Stack">Stack</a>
+    <a href="#proyectos" data-es="Proyectos" data-en="Projects">Proyectos</a>
+    <a href="#reconocimientos" data-es="Reconocimientos" data-en="Recognitions">Reconocimientos</a>
+    <a href="#historial-laboral" data-es="Historial" data-en="History">Historial</a>
+    <a href="#formacion" data-es="Formación" data-en="Education">Formación</a>
+    <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
     
-    <nav class="mi-barra-de-arriba">
-        <div class="mis-links">
-            <a href="#sobre-mi">QUIÉN SOY</a>
-            <a href="#mis-trabajos">PROYECTOS</a>
-            <a href="#mi-historial">HISTORIAL</a>
-            <a href="#mi-contacto">CONTACTO</a>
-        </div>
-    </nav>
+    <div class="contenedor-selector-idioma">
+      <button id="btnIdiomaToggle" onclick="toggleMenuIdioma(event)" class="btn-idioma" aria-expanded="false">
+        🌐 ES ▾
+      </button>
+      <div id="menuIdioma" class="menu-desplegable-idioma">
+        <button onclick="seleccionarIdioma('es')">Español</button>
+        <button onclick="seleccionarIdioma('en')">English</button>
+      </div>
+    </div>
+  </div>
+</nav>
 
-    <header class="bloque-de-inicio">
-        <div class="caja-de-bienvenida">
-            <span class="etiqueta-de-seguridad">PORTAFOLIO</span>
-            <h1>JESICA MALDONADO</h1>
-            <p class="mi-titulo-profesional">DESARROLLADORA JAVA FULL STACK JR.</p>
+<header class="portada">
+  <video autoplay muted loop playsinline class="video-fondo">
+    <source src="imagenes/animación_horizontal.mp4" type="video/mp4">
+    Tu navegador no soporta videos HTML5.
+  </video>
+
+  <div class="capa-oscura"></div>
+
+  <div class="portada-texto">
+    <p class="portada-rol" data-es="Portafolio" data-en="Portfolio">Portafolio</p>
+    <h1>Jesica Maldonado</h1>
+    <p class="portada-frase" data-es="Desarrollo web, ciberseguridad e IA" data-en="Web development, cybersecurity & AI">Desarrollo web, ciberseguridad e IA</p>
+    <div class="portada-enlaces">
+      <a href="https://github.com/Aramau" target="_blank" rel="noopener">GitHub</a>
+      <span class="separador-enlaces">•</span>
+      <a href="https://www.linkedin.com/in/jesicamaldonadouitz/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+
+<section id="sobre-mi" class="seccion con-animacion">
+    <h2 data-es="Quién soy" data-en="About me">Quién soy</h2>
+    <div class="contenedor-sobre-mi">
+      <div class="contenedor-imagen-perfil">
+        <img src="imagenes/Jesicaimg.jpg" alt="Fotografía de Jesica Maldonado" class="imagen-perfil">
+      </div>
+      <div class="texto-sobre-mi">
+        <p data-es="Hola, soy Jesica. Mi camino en la tecnología combina desarrollo web y ciberseguridad. Cuento con formación como desarrolladora Java Full Stack Jr. y continúo formándome como analista de ciberseguridad Jr. También me interesa la Inteligencia Artificial y la forma en que estas áreas pueden conectarse para crear soluciones digitales más seguras y humanas." 
+           data-en="Hello, I'm Jesica. My journey in technology combines web development and cybersecurity. I am trained as a Jr. Java Full Stack Developer and continue my training as a Jr. Cybersecurity Analyst. I am also interested in Artificial Intelligence and how these areas connect to create safer and more human digital solutions.">
+           Hola, soy Jesica. Mi camino en la tecnología combina desarrollo web y ciberseguridad. Cuento con formación como desarrolladora Java Full Stack Jr. y continúo formándome como analista de ciberseguridad Jr. También me interesa la Inteligencia Artificial y la forma en que estas áreas pueden conectarse para crear soluciones digitales más seguras y humanas.
+        </p>
+
+        <p data-es="Mi relación con la tecnología comenzó en un contexto muy cercano: en mi familia teníamos un cibercafé, por ahí de los años 2000. Eran otros tiempos, aún se podía sentir novedad y asombro en tener acceso a una computadora y conectarse a internet era todo un lujo. En ese espacio, acompañaba a niñas, niños y adolescentes de mi comunidad en el uso de herramientas digitales, utilizando la tecnología como apoyo para el desarrollo de habilidades básicas como leer, escribir, sumar y restar, así como para el uso de recursos digitales en la realización de sus actividades escolares." 
+           data-en="My relationship with technology started in a very close context: my family owned an internet café back around the year 2000. Those were different times; you could still feel novelty and awe in having access to a computer, and connecting to the internet was quite a luxury. In that space, I accompanied children and adolescents from my community in the use of digital tools, using technology as support for the development of basic skills such as reading, writing, adding, and subtracting, as well as for the use of digital resources in carrying out their school activities.">
+           Mi relación con la tecnología comenzó en un contexto muy cercano: en mi familia teníamos un cibercafé, por ahí de los años 2000. Eran otros tiempos, aún se podía sentir novedad y asombro en tener acceso a una computadora y conectarse a internet era todo un lujo. En ese espacio, acompañaba a niñas, niños y adolescentes de mi comunidad en el uso de herramientas digitales, utilizando la tecnología como apoyo para el desarrollo de habilidades básicas como leer, escribir, sumar y restar, así como para el uso de recursos digitales en la realización de sus actividades escolares.
+        </p>
+
+        <p data-es="Con el tiempo, ese contacto se convirtió en un interés por entender qué había detrás de todas esas herramientas, cómo se construían y todo lo que era posible crear con ellas. Así llegué al desarrollo web, la Inteligencia Artificial y la ciberseguridad, áreas que sigo explorando y conectando. Mi formación en ciencias del comportamiento también forma parte de cómo entiendo la tecnología: me permite considerar tanto la dimensión técnica como la humana, y se refleja en mi manera de trabajar. Disfruto colaborar, escuchar distintas perspectivas y aprender de compañeros y mentores. Valoro la escucha, el respeto y el apoyo mutuo, porque creo que las mejores ideas también se construyen en conjunto." 
+           data-en="Over time, that contact turned into an interest in understanding what was behind all those tools, how they were built, and everything that could be created with them. That is how I arrived at web development, Artificial Intelligence, and cybersecurity—areas I continue to explore and connect. My background in behavioral science is also part of how I understand technology: it allows me to consider both the technical and human dimensions, reflecting in how I work. I enjoy collaborating, listening to diverse perspectives, and learning from peers and mentors. I value listening, respect, and mutual support, because I believe the best ideas are built together.">
+           Con el tiempo, ese contacto se convirtió en un interés por entender qué había detrás de todas esas herramientas, cómo se construían y todo lo que era posible crear con ellas. Así llegué al desarrollo web, la Inteligencia Artificial y la ciberseguridad, áreas que sigo explorando y conectando. Mi formación en ciencias del comportamiento también forma parte de cómo entiendo la tecnología: me permite considerar tanto la dimensión técnica como la humana, y se refleja en mi manera de trabajar. Disfruto colaborar, escuchar distintas perspectivas y aprender de compañeros y mentores. Valoro la escucha, el respeto y el apoyo mutuo, porque creo que las mejores ideas también se construyen en conjunto.
+        </p>
+
+        <p data-es="Disfruto aprender, experimentar y convertir ideas en proyectos, incorporando una perspectiva de Safety by Design para anticipar riesgos y considerar el impacto de la tecnología desde su diseño. Creo que es posible impulsar una tecnología innovadora que no pierda de vista a las personas que están detrás de ella y, desde ahí, busco seguir construyendo entornos digitales más seguros para todas y todos nosotros." 
+           data-en="I enjoy learning, experimenting, and turning ideas into projects, incorporating a Safety by Design perspective to anticipate risks and consider technology's impact from its inception. I believe it is possible to drive innovative technology without losing sight of the people behind it, and from there, I seek to continue building safer digital environments for all of us.">
+           Disfruto aprender, experimentar y convertir ideas en proyectos, incorporando una perspectiva de Safety by Design para anticipar riesgos y considerar el impacto de la tecnología desde su diseño. Creo que es posible impulsar una tecnología innovadora que no pierda de vista a las personas que están detrás de ella y, desde ahí, busco seguir construyendo entornos digitales más seguros para todas y todos nosotros.
+        </p>
+      </div>
+    </div>
+  </section>
+
+<section id="habilidades" class="seccion-alterna con-animacion">
+    <div class="contenido-seccion">
+      <h2 data-es="Stack y Habilidades" data-en="Stack & Skills">Stack y Habilidades</h2>
+      <div class="bloques-habilidades">
+        
+        <div class="grupo-stack">
+          <h3 data-es="Desarrollo & Herramientas" data-en="Development & Tools">Desarrollo & Herramientas</h3>
+          <div class="lista-skills">
+            <span><i class="devicon-html5-plain colored"></i> HTML5</span> 
+            <span><i class="devicon-css3-plain colored"></i> CSS3</span> 
+            <span><i class="devicon-javascript-plain colored"></i> JavaScript</span> 
+            <span><i class="devicon-bootstrap-plain colored"></i> Bootstrap</span> 
+            <span><i class="devicon-java-plain colored"></i> Java</span> 
+            <span><i class="devicon-python-plain colored"></i> Python</span> 
+            <span><i class="devicon-mysql-plain colored"></i> MySQL</span> 
+            <span><i class="devicon-trello-plain colored"></i> Scrum</span> 
+            <span><i class="devicon-figma-plain colored"></i> Figma</span> 
+            <span><i class="devicon-jira-plain colored"></i> Jira</span> 
+            <span><i class="devicon-git-plain colored"></i> Git</span> 
+            <span><i class="devicon-github-original"></i> GitHub</span> 
+            <span><i class="devicon-vscode-plain colored"></i> VSCode</span> 
+            <span><i class="devicon-intellij-plain colored"></i> IntelliJ IDEA</span> 
+            <span><i class="devicon-google-plain colored"></i> Google Workspace</span>
+          </div>
+        </div>
+        
+        <div class="grupo-stack">
+          <h3 data-es="IA & Asistencia de Código" data-en="AI & Code Assistance">IA & Asistencia de Código</h3>
+          <div class="lista-skills">
+            <span>🐳 DeepSeek</span>
+            <span><i class="devicon-slack-plain colored"></i> Claude</span> 
+            <span><i class="bi bi-robot"></i> Grok</span>
+            <span><i class="devicon-google-plain colored"></i> Gemini</span> 
+            <span><i class="bi bi-journal-code"></i> NotebookLM</span>
+            <span><i class="devicon-github-original"></i> GitHub Copilot</span> 
+            <span><i class="devicon-cplusplus-plain colored"></i> ChatGPT</span> 
+            <span><i class="bi bi-stars"></i> Prompt Engineering</span>
+          </div>
+        </div>
+
+        <div class="grupo-stack">
+          <h3 data-es="Redes & Fundamentos" data-en="Networks & Fundamentals">Redes & Fundamentos</h3>
+          <div class="lista-skills">
+            <span><i class="bi bi-globe"></i> TCP/IP</span> 
+            <span><i class="bi bi-layers"></i> Modelo OSI</span> 
+            <span><i class="bi bi-hdd-network"></i> Direccionamiento IP</span> 
+            <span><i class="bi bi-wifi"></i> LAN/WAN/WLAN</span> 
+            <span><i class="bi bi-router"></i> Routers y Switches</span> 
+            <span><i class="bi bi-pc-display"></i> Cisco Packet Tracer</span>
+          </div>
+        </div>
+
+        <div class="grupo-stack">
+          <h3 data-es="Habilidades Blandas" data-en="Soft Skills">Habilidades Blandas</h3>
+          <div class="lista-skills">
+            <span data-es='<i class="bi bi-lightbulb"></i> Autoaprendizaje' data-en='<i class="bi bi-lightbulb"></i> Self-learning'><i class="bi bi-lightbulb"></i> Autoaprendizaje</span> 
+            <span data-es='<i class="bi bi-graph-up-arrow"></i> Mentalidad de crecimiento' data-en='<i class="bi bi-graph-up-arrow"></i> Growth mindset'><i class="bi bi-graph-up-arrow"></i> Mentalidad de crecimiento</span> 
+            <span data-es='<i class="bi bi-search"></i> Pensamiento crítico' data-en='<i class="bi bi-search"></i> Critical thinking'><i class="bi bi-search"></i> Pensamiento crítico</span> 
+            <span data-es='<i class="bi bi-cpu"></i> Pensamiento analítico' data-en='<i class="bi bi-cpu"></i> Analytical thinking'><i class="bi bi-cpu"></i> Pensamiento analítico</span> 
+            <span data-es='<i class="bi bi-palette"></i> Creatividad' data-en='<i class="bi bi-palette"></i> Creativity'><i class="bi bi-palette"></i> Creatividad</span> 
+            <span data-es='<i class="bi bi-shuffle"></i> Adaptabilidad' data-en='<i class="bi bi-shuffle"></i> Adaptability'><i class="bi bi-shuffle"></i> Adaptabilidad</span> 
+            <span data-es='<i class="bi bi-check2-circle"></i> Toma de decisiones' data-en='<i class="bi bi-check2-circle"></i> Decision making'><i class="bi bi-check2-circle"></i> Toma de decisiones</span> 
+            <span data-es='<i class="bi bi-people"></i> Trabajo en equipo' data-en='<i class="bi bi-people"></i> Teamwork'><i class="bi bi-people"></i> Trabajo en equipo</span> 
+            <span data-es='<i class="bi bi-mic"></i> Ponencias y talleres' data-en='<i class="bi bi-mic"></i> Public speaking & workshops'><i class="bi bi-mic"></i> Ponencias y talleres</span> 
+            <span data-es='<i class="bi bi-shield-check"></i> Resolución de conflictos' data-en='<i class="bi bi-shield-check"></i> Conflict resolution'><i class="bi bi-shield-check"></i> Resolución de conflictos</span> 
+            <span data-es='<i class="bi bi-award"></i> Liderazgo' data-en='<i class="bi bi-award"></i> Leadership'><i class="bi bi-award"></i> Liderazgo</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos" class="seccion con-animacion">
+    <h2 data-es="Proyectos" data-en="Projects">Proyectos</h2>
+    <div class="rejilla-proyectos">
+
+      <article class="tarjeta-proyecto tarjeta-equipo">
+        <div class="imagen-proyecto">
+          <img src="imagenes/tintabrava.png" alt="Vista previa del proyecto Tinta Brava">
+        </div>
+        <div class="cuerpo-tarjeta">
+          <div class="encabezado-tarjeta">
+            <h3>Tinta Brava</h3>
+            <span class="tipo-proyecto" data-es="Equipo | Full Stack (Abril 2026 - Julio 2026)" data-en="Team | Full Stack (April 2026 - July 2026)">Equipo | Full Stack (Abril 2026 - Julio 2026)</span>
+          </div>
+          <p data-es="E-commerce full stack para automatizar pedidos personalizados, integrando interfaces dinámicas, previsualización de diseños en tiempo real y maquetación responsiva. Rol: Scrum Master & Developer." 
+             data-en="Full stack e-commerce to automate custom orders, integrating dynamic interfaces, real-time design preview, and responsive layout. Role: Scrum Master & Developer.">
+             E-commerce full stack para automatizar pedidos personalizados, integrando interfaces dinámicas, previsualización de diseños en tiempo real y maquetación responsiva. Rol: Scrum Master & Developer.
+          </p>
+          <ul class="lista-herramientas">
+            <li><i class="devicon-java-plain colored"></i></li> 
+            <li><i class="devicon-javascript-plain colored"></i></li> 
+            <li><i class="devicon-bootstrap-plain colored"></i></li> 
+            <li><i class="devicon-html5-plain colored"></i></li> 
+            <li><i class="devicon-css3-plain colored"></i></li> 
+            <li><i class="devicon-mysql-plain colored"></i></li>
+          </ul>
+          <a href="https://github.com/ElNovenoByte/TintaBrava" target="_blank" rel="noopener" class="enlace-codigo" data-es="Ver código en GitHub" data-en="View code on GitHub">Ver código en GitHub</a>
+        </div>
+      </article>
+
+      <article class="tarjeta-proyecto tarjeta-individual">
+        <div class="imagen-proyecto">
+          <img src="imagenes/bloghadas.png" alt="Vista previa del proyecto Blog de las Hadas">
+        </div>
+        <div class="cuerpo-tarjeta">
+          <div class="encabezado-tarjeta">
+            <h3>El Blog de las Hadas</h3>
+            <span class="tipo-proyecto" data-es="Individual" data-en="Individual">Individual</span>
+          </div>
+          <p data-es="Blog creado para practicar la lógica de front-end sin frameworks: filtros, validaciones de formularios y manejo del DOM con JavaScript." 
+             data-en="Blog created to practice front-end logic without frameworks: filters, form validation, and DOM manipulation with JavaScript.">
+             Blog creado para practicar la lógica de front-end sin frameworks: filtros, validaciones de formularios y manejo del DOM con JavaScript.
+          </p>
+          <ul class="lista-herramientas">
+            <li><i class="devicon-html5-plain colored"></i></li> 
+            <li><i class="devicon-css3-plain colored"></i></li> 
+            <li><i class="devicon-javascript-plain colored"></i></li>
+          </ul>
+          <a href="https://github.com/aramau/TIFC2DEV-SDPF6-Simulaci-n-de-Proyecto-SCRUM" target="_blank" rel="noopener" class="enlace-codigo" data-es="Ver código en GitHub" data-en="View code on GitHub">Ver código en GitHub</a>
+        </div>
+      </article>
+
+      <article class="tarjeta-proyecto tarjeta-colaborativo">
+        <div class="imagen-proyecto">
+          <img src="imagenes/landingpagedptva.png" alt="Vista previa de la Landing Page">
+        </div>
+        <div class="cuerpo-tarjeta">
+          <div class="encabezado-tarjeta">
+            <h3>Landing Page Deportiva</h3>
+            <span class="tipo-proyecto" data-es="Colaborativo (Abril 2026)" data-en="Collaborative (April 2026)">Colaborativo (Abril 2026)</span>
+          </div>
+          <p data-es="Landing page para un hackatón. Implementé funcionalidades interactivas con JavaScript, lógica de carrito/navegación y control de versiones colaborativo con GitHub." 
+             data-en="Landing page for a hackathon. Implemented interactive features with JavaScript, cart/navigation logic, and collaborative version control with GitHub.">
+             Landing page para un hackatón. Implementé funcionalidades interactivas con JavaScript, lógica de carrito/navegación y control de versiones colaborativo con GitHub.
+          </p>
+          <ul class="lista-herramientas">
+            <li><i class="devicon-html5-plain colored"></i></li> 
+            <li><i class="devicon-css3-plain colored"></i></li> 
+            <li><i class="devicon-bootstrap-plain colored"></i></li> 
+            <li><i class="devicon-javascript-plain colored"></i></li>
+          </ul>
+          <a href="https://github.com/HackatonLanginPage/HackatonLandingPage" target="_blank" rel="noopener" class="enlace-codigo" data-es="Ver código en GitHub" data-en="View code on GitHub">Ver código en GitHub</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="reconocimientos" class="seccion con-animacion">
+    <h2 data-es="Reconocimientos" data-en="Recognitions">Reconocimientos</h2>
+    <div class="rejilla-reconocimientos">
+
+      <article class="tarjeta-reconocimiento">
+        <div id="carruselWomenCiso" class="carousel slide imagen-reconocimiento" data-bs-ride="carousel" data-bs-interval="7000">
+          <div class="carousel-inner w-100 h-100">
+            <div class="carousel-item active w-100 h-100">
+              <img src="imagenes/womenciso01.jpg" class="d-block w-100 h-100" alt="Certificado y evento Women CISO 1" style="object-fit: cover; object-position: center 30%;">
+            </div>
+            <div class="carousel-item w-100 h-100">
+              <img src="imagenes/womenciso02.jpg" class="d-block w-100 h-100" alt="Certificado y evento Women CISO 2" style="object-fit: cover; object-position: center 30%;">
+            </div>
+            <div class="carousel-item w-100 h-100">
+              <img src="imagenes/womenciso03.jpg" class="d-block w-100 h-100" alt="Certificado y evento Women CISO 3" style="object-fit: cover; object-position: center 30%;">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carruselWomenCiso" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden" data-es="Anterior" data-en="Previous">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carruselWomenCiso" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden" data-es="Siguiente" data-en="Next">Siguiente</span>
+          </button>
+        </div>
+
+        <div class="cuerpo-tarjeta">
+          <div class="encabezado-tarjeta">
+            <h3 data-es="3er lugar en la competencia de proyectos Women CISO - ITAM" data-en="3rd place in Women CISO - ITAM project competition">3er lugar en la competencia de proyectos Women CISO - ITAM</h3>
+            <span class="tipo-proyecto" data-es="Firewall IoT con IA (AngelIoT) | Marzo 2025 - Junio 2025" data-en="IoT Firewall with AI (AngelIoT) | March 2025 - June 2025">Firewall IoT con IA (AngelIoT) | Marzo 2025 - Junio 2025</span>
+          </div>
+          <p data-es="Durante varios meses participé en Cybersecurity & AI School for Women, la tercera generación de Women CISO, un programa que reunió a más de 1,400 participantes y 500 proyectos, de los cuales 25 fueron seleccionados como semifinalistas. En equipo, obtuvimos el tercer lugar de la competencia por nuestro trabajo colaborativo, la viabilidad técnica y el impacto social de nuestra propuesta." 
+             data-en="For several months I participated in Cybersecurity & AI School for Women, the third generation of Women CISO, a program bringing together over 1,400 participants and 500 projects, of which 25 were selected as semifinalists. As a team, we won third place in the competition for our collaborative work, technical viability, and the social impact of our proposal.">
+             Durante varios meses participé en Cybersecurity & AI School for Women, la tercera generación de Women CISO, un programa que reunió a más de 1,400 participantes y 500 proyectos, de los cuales 25 fueron seleccionados como semifinalistas. En equipo, obtuvimos el tercer lugar de la competencia por nuestro trabajo colaborativo, la viabilidad técnica y el impacto social de nuestra propuesta.
+          </p>
+          
+          <div id="textoAdicionalWomen" class="contenido-desplegable" style="display: none;">
+            <p data-es="Nuestro proyecto consistió en la conceptualización de un firewall basado en Inteligencia Artificial para la protección de redes IoT, orientado a fortalecer la seguridad de dispositivos conectados mediante procesamiento local."
+               data-en="Our project consisted of conceptualizing an Artificial Intelligence-based firewall for IoT network protection, aimed at strengthening connected devices security through local processing.">
+               Nuestro proyecto consistió en la conceptualización de un firewall basado en Inteligencia Artificial para la protección de redes IoT, orientado a fortalecer la seguridad de dispositivos conectados mediante procesamiento local.
+            </p>
+            <p><strong data-es="Mi participación incluyó:" data-en="My participation included:">Mi participación incluyó:</strong></p>
+            <ul style="padding-left: 1.2rem; margin-bottom: 1rem; font-size: 0.95rem;">
+              <li data-es="Conceptualización y documentación de la arquitectura del firewall para redes IoT." data-en="Conceptualization and documentation of the firewall architecture for IoT networks.">Conceptualización y documentación de la arquitectura del firewall para redes IoT.</li>
+              <li data-es="Definición de especificaciones técnicas para un modelo de aprendizaje supervisado y continuo mediante edge computing, buscando reducir latencia y consumo energético." data-en="Definition of technical specifications for a supervised and continuous learning model using edge computing, aiming to reduce latency and energy consumption.">Definición de especificaciones técnicas para un modelo de aprendizaje supervisado y continuo mediante edge computing, buscando reducir latencia y consumo energético.</li>
+              <li data-es="Liderazgo en la redacción y estructuración del documento técnico, utilizando NotebookLM y agentes de IA personalizados para la investigación, síntesis de información y desarrollo de especificaciones funcionales." data-en="Leadership in writing and structuring the technical document, using NotebookLM and customized AI agents for research, information synthesis, and functional specifications development.">Liderazgo en la redacción y estructuración del documento técnico, utilizando NotebookLM y agentes de IA personalizados para la investigación, síntesis de información y desarrollo de especificaciones funcionales.</li>
+              <li data-es="Colaboración en la elaboración de la matriz de riesgos y en la definición del modelo de negocio SaaS + Hardware." data-en="Collaboration in drafting the risk matrix and defining the SaaS + Hardware business model.">Colaboración en la elaboración de la matriz de riesgos y en la definición del modelo de negocio SaaS + Hardware.</li>
+              <li data-es="Participación en la presentación final del proyecto ante el jurado conformado por expertas y expertos en ciberseguridad y tecnología a nivel latinoamericano." data-en="Participation in the final project presentation before a jury of cybersecurity and technology experts at the Latin American level.">Participación en la presentación final del proyecto ante el jurado conformado por expertas y expertos en ciberseguridad y tecnología a nivel latinoamericano.</li>
+            </ul>
+            <p data-es="Este reconocimiento representa especialmente un reto de aprendizaje y crecimiento profesional: significó adentrarme en temas de ciberseguridad, inteligencia artificial, redes IoT y arquitectura tecnológica, integrándolos con una perspectiva centrada en los riesgos, las personas y el impacto social de la tecnología."
+               data-en="This recognition especially represents a challenge of professional learning and growth: it meant delving into cybersecurity, artificial intelligence, IoT networks, and technological architecture, integrating them with a perspective centered on risks, people, and the social impact of technology.">
+               Este reconocimiento representa especialmente un reto de aprendizaje y crecimiento profesional: significó adentrarme en temas de ciberseguridad, inteligencia artificial, redes IoT y arquitectura tecnológica, integrándolos con una perspectiva centrada en los riesgos, las personas y el impacto social de la tecnología.
+            </p>
+          </div>
+
+          <button id="btnVerMas" onclick="toggleTexto()" class="enlace-codigo" style="background: none; border: none; cursor: pointer; padding: 0; margin-top: 0.5rem; text-align: left;" data-es="Ver más ↓" data-en="See more ↓">Ver más ↓</button>
+        </div>
+      </article>
+
+      <article class="tarjeta-reconocimiento">
+        <div class="imagen-reconocimiento">
+          <img src="imagenes/voluntaria2016.jpg" alt="Reconocimiento Voluntariado del Año UADY" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        </div>
+        <div class="cuerpo-tarjeta">
+          <div class="encabezado-tarjeta">
+            <h3 data-es="Voluntaria del Año" data-en="Volunteer of the Year">Voluntaria del Año</h3>
+            <span class="tipo-proyecto" data-es="Fundación de la Universidad Autónoma de Yucatán | 2016-2017" data-en="Foundation of the Autonomous University of Yucatán | 2016-2017">Fundación de la Universidad Autónoma de Yucatán | 2016-2017</span>
+          </div>
+          <p data-es="Reconocimiento otorgado por acciones de voluntariado como parte del Programa de Voluntariado Jaguar, destacando por acciones solidarias en distintos sectores de la población. La labor incluyó colaboración en albergues de animales, parques ecológicos, jornadas de limpieza de playas, reforestaciones y apoyo en diversas asociaciones civiles en vinculación con la Fundación del Empresariado Yucateco (FEYAC)." 
+             data-en="Recognition granted for volunteer actions as part of the Jaguar Volunteer Program, highlighting solidarity actions in different population sectors. The work included collaboration in animal shelters, ecological parks, beach cleanup days, reforestations, and support for various civil associations linked to the Yucatecan Entrepreneur Foundation (FEYAC).">
+             Reconocimiento otorgado por acciones de voluntariado como parte del Programa de Voluntariado Jaguar, destacando por acciones solidarias en distintos sectores de la población. La labor incluyó colaboración en albergues de animales, parques ecológicos, jornadas de limpieza de playas, reforestaciones y apoyo en diversas asociaciones civiles en vinculación con la Fundación del Empresariado Yucateco (FEYAC).
+          </p>
+          <a href="http://www.cgci.uady.mx/noticiaRead.php?id=979" target="_blank" rel="noopener" class="enlace-codigo" data-es="Ver nota oficial" data-en="View official notice">Ver nota oficial</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="historial-laboral" class="seccion-alterna con-animacion">
+    <div class="contenido-seccion">
+      <h2 data-es="Historial laboral" data-en="Work History">Historial laboral</h2>
+      <div class="linea-tiempo">
+
+        <div class="hito">
+          <span class="hito-año">2020—2026</span>
+          <div class="hito-contenido">
+            <h3 data-es="Psicóloga / Acompañamiento Psicoterapeutico y Psicosocial (Independiente)" data-en="Psychologist / Psychotherapeutic and Psychosocial Support (Independent)">Psicóloga / Acompañamiento Psicoterapeutico y Psicosocial (Independiente)</h3>
+            <p data-es="Aplicación de estrategias clínicas con pacientes, integrando protocolos de seguridad digital y análisis de riesgo, digitalización de expedientes con estándares de confidencialidad y perspectiva de género." 
+               data-en="Application of clinical strategies with patients, integrating digital security protocols and risk analysis, file digitization with confidentiality standards, and gender perspective.">
+               Aplicación de estrategias clínicas con pacientes, integrando protocolos de seguridad digital y análisis de riesgo, digitalización de expedientes con estándares de confidencialidad y perspectiva de género.
+            </p>
+          </div>
+        </div>
+
+        <div class="hito">
+          <span class="hito-año">2019—2022</span>
+          <div class="hito-contenido">
+            <h3 data-es="Servidora de la Nación | Secretaría de Bienestar" data-en="Nation Servant | Ministry of Welfare">Servidora de la Nación | Secretaría de Bienestar</h3>
+            <p data-es="Gestión operativa de sedes de salud y vacunación COVID-19, control de documentación oficial con más de 150 beneficiarios bimestrales y diagnósticos situacionales." 
+               data-en="Operational management of health and COVID-19 vaccination centers, control of official documentation with over 150 bimonthly beneficiaries, and situational diagnoses.">
+               Gestión operativa de sedes de salud y vacunación COVID-19, control de documentación oficial con más de 150 beneficiarios bimestrales y diagnósticos situacionales.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="formacion" class="seccion con-animacion">
+    <h2 data-es="Formación" data-en="Education">Formación</h2>
+    <div class="rejilla-formacion">
+
+      <div class="bloque-formacion">
+        <h3 data-es="Bootcamps & Grados" data-en="Bootcamps & Degrees">Bootcamps & Grados</h3>
+        <p><strong data-es="Mujer Digital (Ciberseguridad)" data-en="Digital Woman (Cybersecurity)">Mujer Digital (Ciberseguridad)</strong> | Junior Achievement (2026 - <span data-es="en curso" data-en="ongoing">en curso</span>)</p>
+        <p><strong data-es="Desarrolladora Java Full Stack Jr." data-en="Jr. Java Full Stack Developer">Desarrolladora Java Full Stack Jr.</strong> | Generation México (2026)</p>
+        <p><strong data-es="Escuela de Ciberseguridad e IA Para Mujeres" data-en="Cybersecurity & AI School for Women">Escuela de Ciberseguridad e IA Para Mujeres</strong> | WOMEN CISO - ITAM (2025)</p>
+        <p><strong data-es="Maestría en Psicoterapia Cognitivo Conductual" data-en="Master's in Cognitive Behavioral Psychotherapy">Maestría en Psicoterapia Cognitivo Conductual</strong> | Centro de Psicoterapia Cognitiva (2024 - 2026)</p>
+        <p><strong data-es="Licenciatura en Psicología (Titulada)" data-en="Bachelor's Degree in Psychology (Graduated)">Licenciatura en Psicología (Titulada)</strong> | Universidad Autónoma de Yucatán (2014 - 2019)</p>
+      </div>
+
+      <div class="bloque-formacion">
+        <h3 data-es="Cursos" data-en="Courses">Cursos</h3>
+        <ul class="lista-cursos">
+          <li data-es="Defensa de red | CISCO (2026)" data-en="Network Defense | CISCO (2026)">Defensa de red | CISCO (2026)</li>
+          <li data-es="Seguridad de terminales | CISCO (2026)" data-en="Endpoint Security | CISCO (2026)">Seguridad de terminales | CISCO (2026)</li>
+          <li data-es="Dispositivos de red y configuración inicial | CISCO (2026)" data-en="Network Devices and Initial Configuration | CISCO (2026)">Dispositivos de red y configuración inicial | CISCO (2026)</li>
+          <li data-es="Conceptos básicos de redes | CISCO (2026)" data-en="Networking Basics | CISCO (2026)">Conceptos básicos de redes | CISCO (2026)</li>
+          <li data-es="Introducción a Ciberseguridad | CISCO (2026)" data-en="Introduction to Cybersecurity | CISCO (2026)">Introducción a Ciberseguridad | CISCO (2026)</li>
+          <li data-es="Congreso Internacional de Inteligencia Artificial y Ciencias Sociales | Facultad de Ciencias Políticas y Sociales, UNAM (2026)" data-en="International Congress of Artificial Intelligence and Social Sciences | Faculty of Political and Social Sciences, UNAM (2026)">Congreso Internacional de Inteligencia Artificial y Ciencias Sociales | Facultad de Ciencias Políticas y Sociales, UNAM (2026)</li>
+          <li data-es="Introducción a SQL | Accenture (2026)" data-en="Introduction to SQL | Accenture (2026)">Introducción a SQL | Accenture (2026)</li>
+          <li data-es="HTML desde 0 | Udemy (2026)" data-en="HTML from Scratch | Udemy (2026)">HTML desde 0 | Udemy (2026)</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer id="contacto">
+  <div class="pie-pagina">
+    <div class="fila-contacto-principal">
+      <p><span data-es="Estemos en contacto:" data-en="Let's get in touch:">Estemos en contacto:</span> <a href="mailto:j.maldonado.uitz@gmail.com">j.maldonado.uitz@gmail.com</a></p>
+      
+      <div class="redes">
+        <a href="https://github.com/Aramau" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/jesicamaldonadouitz/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+    <p class="leyenda-ia" data-es="Textos optimizados y video de fondo generados con asistencia de IA." data-en="Texts optimized and background video generated with AI assistance.">
+      Textos optimizados y video de fondo generados con asistencia de IA.
+    </p>
+  </div>
+</footer>
+
+<script>
+  function toggleTexto() {
+    const textoAdicional = document.getElementById("textoAdicionalWomen");
+    const btn = document.getElementById("btnVerMas");
     
-        </div>
-    </header>
+    if (textoAdicional.style.display === "none") {
+      textoAdicional.style.display = "block";
+      btn.innerHTML = currentLang === 'es' ? "Ver menos ↑" : "See less ↑";
+    } else {
+      textoAdicional.style.display = "none";
+      btn.innerHTML = currentLang === 'es' ? "Ver más ↓" : "See more ↓";
+    }
+  }
 
-    <main class="contenido-principal">
-        <section id="sobre-mi" class="seccion-normal">
-            <h2 class="numero-seccion">SOBRE MI </h2>
-            <div class="texto-informativo">
-                <p>Desarrolladora full stack jr. con formación en psicología. Mi pasión es anticipar riesgos sociales desde el diseño del software, aplicando análisis de comportamiento y perspectiva de género.</p>
-            </div>
-        </section>
+  let currentLang = 'es';
 
-        <section id="mis-trabajos" class="seccion-normal">
-            <h2 class="numero-seccion">PROYECTOS</h2>
-            <div class="rejilla-de-proyectos">
-                
-                <div class="cuadro-de-proyecto">
-                    <div class="parte-arriba-proyecto">
-                        <h3>TINTA BRAVA</h3>
-                        <span class="tipo-de-proyecto">EQUIPO / FULL STACK</span>
-                    </div>
-                    <p>Plataforma E-commerce para personalizar pedidos de estampado. Implementé interfaces con JavaScript y Bootstrap para previsualización en tiempo real.</p>
-                    <span class="mis-herramientas">JAVA / BOOTSTRAP / HTML / CSS / MYSQL / JS</span>
-                    <a href="https://github.com/ElNovenoByte/TintaBrava" target="_blank" class="boton-al-codigo">VER EN GITHUB_</a>
-                </div>
+  function toggleMenuIdioma(event) {
+    event.stopPropagation();
+    const menu = document.getElementById('menuIdioma');
+    const btn = document.getElementById('btnIdiomaToggle');
+    const isOpen = menu.classList.contains('mostrar');
+    
+    if (isOpen) {
+      menu.classList.remove('mostrar');
+      btn.setAttribute('aria-expanded', 'false');
+    } else {
+      menu.classList.add('mostrar');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
 
-                <div class="cuadro-de-proyecto">
-                    <div class="parte-arriba-proyecto">
-                        <h3>BLOG DE LAS HADAS</h3>
-                        <span class="tipo-de-proyecto">INDIVIDUAL</span>
-                    </div>
-                    <p>Blog de gestión de contenidos con lógica front-end.</p>
-                    <span class="mis-herramientas">HTML / CSS / JS </span>
-                    <a href="https://github.com/aramau/TIFC2DEV-SDPF6-Simulaci-n-de-Proyecto-SCRUM" target="_blank" class="boton-al-codigo">VER EN GITHUB_</a>
-                </div>
+  window.addEventListener('click', () => {
+    const menu = document.getElementById('menuIdioma');
+    const btn = document.getElementById('btnIdiomaToggle');
+    if (menu.classList.contains('mostrar')) {
+      menu.classList.remove('mostrar');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
 
-                <div class="cuadro-de-proyecto">
-                    <div class="parte-arriba-proyecto">
-                        <h3>LANDING PAGE</h3>
-                        <span class="tipo-de-proyecto">COLABORATIVO</span>
-                    </div>
-                    <p>Landing page para un hackatón. Me encargué de asegurar que la experiencia de usuario fuera intuitiva y accesible.</p>
-                    <span class="mis-herramientas">HTML / CSS / BOOTSTRAP / JS</span>
-                    <a href="https://github.com/HackatonLanginPage/HackatonLandingPage" target="_blank" class="boton-al-codigo">VER EN GITHUB_</a>
-                </div>
-            </div>
-        </section>
+  function seleccionarIdioma(lang) {
+    currentLang = lang;
+    const btn = document.getElementById('btnIdiomaToggle');
+    
+    btn.innerHTML = currentLang === 'es' ? '🌐 ES ▾' : '🌐 EN ▾';
+    document.documentElement.lang = currentLang;
 
-        <section id="mi-historial" class="seccion-normal">
-            <h2 class="numero-seccion">HISTORIAL LABORAL</h2>
-            <div class="lista-de-pasos">
-                <div class="paso">
-                    <span class="el-año">2020—2026</span>
-                    <div class="lo-que-hice">
-                        <h4>PSICÓLOGA INDEPENDIENTE</h4>
-                        <p>Psicoterapia y orientación psicológica con perspectiva de género y protocolos de seguridad digital.</p>
-                    </div>
-                </div>
-
-                <div class="paso">
-                    <span class="el-año">2022</span>
-                    <div class="lo-que-hice">
-                        <h4>CENTRO ESTATAL DE PREVENCIÓN DEL DELITO Y PARTICIPACIÓN CIUDADANA DE YUCATÁN</h4>
-                        <p>Facilitadora de talleres en habilidades blandas y prevención de violencias. Gestión de alianzas estratégicas con instituciones educativa.</p>
-                    </div>
-                </div>
-
-                <div class="paso">
-                    <span class="el-año">2019—2022</span>
-                    <div class="lo-que-hice">
-                        <h4>SECRETARÍA DE BIENESTAR</h4>
-                        <p>Coordinación operativa y gestión de programas federales en Yucatán.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="seccion-normal">
-            <h2 class="numero-seccion">FORMACIÓN</h2>
-            <div class="rejilla-doble">
-                <div class="cuadro-info">
-                    <h3>GRADOS ACADÉMICOS</h3>
-                    <p><strong>Maestría en Psicoterapia TCC</strong> - Centro de Psicoterapia Cognitiva (En curso).</p>
-                    <p><strong>Licenciatura en Psicología</strong> - UADY.</p>
-                </div>
-                <div class="cuadro-info">
-                    <h3>CURSOS</h3>
-                    <ul class="puntos-lista">
-                        <li>Introducción a SQL - Accenture.</li>
-                        <li>Desarrollo Full Stack Jr. - Generation México.</li>
-                        <li>HTML5 desde 0 - Udemy.</li>
-                        <li>Ciberseguridad e IA para mujeres - WOMEN CISO e ITAM.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer id="mi-contacto">
-        <div class="el-final-de-pagina">
-            <p>CONTACTO: <strong>j.maldonado.uitz@gmail.com</strong></p>
-            <div class="mis-redes">
-                <a href="https://github.com/Aramau" target="_blank">GITHUB</a> / 
-                <a href="https://www.linkedin.com/in/jesicamaldonadouitz/" target="_blank">LINKEDIN</a>
-            </div>
-        </div>
-    </footer>
+    const elementos = document.querySelectorAll('[data-es][data-en]');
+    elementos.forEach(el => {
+      if (el.tagName === 'TITLE') {
+        document.title = el.getAttribute(`data-${currentLang}`);
+      } else if (el.hasAttribute('aria-label')) {
+        el.setAttribute('aria-label', el.getAttribute(`data-${currentLang}`));
+      } else {
+        el.innerHTML = el.getAttribute(`data-${currentLang}`);
+      }
+    });
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
