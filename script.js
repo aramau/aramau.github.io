@@ -1,3 +1,4 @@
+// Desplazamiento suave entre secciones
 document.querySelectorAll('a[href^="#"]').forEach((enlace) => {
   enlace.addEventListener('click', function (evento) {
     const destino = document.querySelector(this.getAttribute('href'));
@@ -8,8 +9,9 @@ document.querySelectorAll('a[href^="#"]').forEach((enlace) => {
   });
 });
 
+// Animación de aparición suave al hacer scroll
 const prefiereMenosMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const seccionesAnimables = document.querySelectorAll('.seccion.con-animacion');
+const seccionesAnimables = document.querySelectorAll('.seccion.con-animacion, .seccion-general');
 
 if (prefiereMenosMovimiento || !('IntersectionObserver' in window)) {
   seccionesAnimables.forEach((seccion) => seccion.classList.add('seccion-visible'));
