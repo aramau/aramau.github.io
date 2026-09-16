@@ -1,42 +1,35 @@
-// Este código sirve para que cuando hagas clic en el menú, la página baje suavemente
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function (evento) {
-        evento.preventDefault();
-        const dondeVoy = document.querySelector(this.getAttribute('href'));
-        
-        if (dondeVoy) {
-            dondeVoy.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    });
+// Desplazamiento suave entre secciones
+document.querySelectorAll('a[href^="#"]').forEach((enlace) => {
+  enlace.addEventListener('click', function (evento) {
+    const destino = document.querySelector(this.getAttribute('href'));
+    if (destino) {
+      evento.preventDefault();
+      destino.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
 });
 
-// Este código hace que las secciones aparezcan con un efecto cuando vas bajando (scroll)
-const misSecciones = document.querySelectorAll('.seccion-normal');
+// Animación de aparición suave al hacer scroll
+const prefiereMenosMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const seccionesAnimables = document.querySelectorAll('.seccion.con-animacion, .seccion-general');
 
-const aparecerAlBajar = new IntersectionObserver((elementos) => {
-    elementos.forEach(el => {
-        if (el.isIntersecting) {
-            el.target.classList.add('seccion-visible');
+if (prefiereMenosMovimiento || !('IntersectionObserver' in window)) {
+  seccionesAnimables.forEach((seccion) => seccion.classList.add('seccion-visible'));
+} else {
+  const observador = new IntersectionObserver(
+    (entradas, obs) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('seccion-visible');
+          obs.unobserve(entrada.target);
         }
-    });
-}, { threshold: 0.15 });
+      });
+    },
+    { threshold: 0.1 }
+  );
 
-misSecciones.forEach(sec => {
-    // Les pongo un estilo inicial para que estén un poco abajo y transparentes
-    sec.style.opacity = "0";
-    sec.style.transform = "translateY(30px)";
-    sec.style.transition = "all 0.8s ease-out";
-    aparecerAlBajar.observe(sec);
-});
-
-document.addEventListener('scroll', () => {
-    misSecciones.forEach(sec => {
-        const posicion = sec.getBoundingClientRect();
-        if (posicion.top < window.innerHeight * 0.8) {
-            sec.style.opacity = "1";
-            sec.style.transform = "translateY(0)";
-        }
-    });
-});
+  seccionesAnimables.forEach((seccion) => observador.observe(seccion));
+  setTimeout(() => {
+    seccionesAnimables.forEach((seccion) => seccion.classList.add('seccion-visible'));
+  }, 1200);
+}
